@@ -3,6 +3,9 @@
 
 일회용컵 보증금 제도 시행에 따른 CNN 이미지 분류 모델을 활용한 일회용컵 수거함
 
+# 기사
+https://www.gjdream.com/news/articleView.html?idxno=616365
+
 # 제안 및 필요성
 ![image](https://user-images.githubusercontent.com/64225078/217776312-9683e9ed-0425-4d77-b544-3412ba5e25d2.png)
 ![image](https://user-images.githubusercontent.com/64225078/217776378-6add6b43-dd75-4736-8538-28d69380996c.png)
