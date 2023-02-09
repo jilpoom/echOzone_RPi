@@ -1,0 +1,111 @@
+﻿-- 테이블 순서는 관계를 고려하여 한 번에 실행해도 에러가 발생하지 않게 정렬되었습니다.
+
+-- product_info Table Create SQL
+CREATE TABLE product_info
+(
+    `product_seq`     INT UNSIGNED    NOT NULL    AUTO_INCREMENT COMMENT '제품 고유번호', 
+    `product_cap`     VARCHAR(25)     NOT NULL    COMMENT '제품 용량', 
+    `manufacture_dt`  DATETIME        NOT NULL    COMMENT '제조 일자', 
+    `shop_id`         VARCHAR(25)     NOT NULL    COMMENT '점포 아이디', 
+     PRIMARY KEY (product_seq)
+);
+
+
+-- user_info Table Create SQL
+CREATE TABLE user_info
+(
+    `user_id`        VARCHAR(25)     NOT NULL    COMMENT '사용자 아이디', 
+    `user_pw`        VARCHAR(25)     NOT NULL    COMMENT '사용자 비밀번호', 
+    `user_seq`       INT UNSIGNED    NOT NULL    COMMENT '사용자 고유번호', 
+    `user_type`      CHAR(1)         NOT NULL    COMMENT '사용자 유형', 
+    `user_phone`     VARCHAR(25)     NOT NULL    COMMENT '사용자 휴대폰번호', 
+    `user_address`   VARCHAR(300)    NOT NULL    COMMENT '사용자 주소', 
+    `user_nm`        VARCHAR(25)     NOT NULL    COMMENT '사용자 명', 
+    `user_joindate`  DATETIME        NOT NULL    DEFAULT NOW() COMMENT '사용자 가입일자', 
+     PRIMARY KEY (user_id)
+);
+
+ALTER TABLE user_info COMMENT '사용자 정보 테이블';
+
+CREATE UNIQUE INDEX UQ_user_info_1
+    ON user_info(user_phone);
+
+
+-- shop_info Table Create SQL
+CREATE TABLE shop_info
+(
+    `shop_id`       VARCHAR(25)     NOT NULL    COMMENT '점포 아이디', 
+    `shop_pw`       VARCHAR(25)     NOT NULL    COMMENT '점포 비밀번호', 
+    `shop_seq`      INT UNSIGNED    NOT NULL    COMMENT '점포 고유번호', 
+    `com_resid`     VARCHAR(25)     NOT NULL    COMMENT '사업자 등록번호', 
+    `product_seq`   INT UNSIGNED    NOT NULL    COMMENT '제품 고유번호', 
+    `inst_dt`       DATETIME        NOT NULL    DEFAULT NOW() COMMENT '설치 일자', 
+    `shop_nm`       VARCHAR(25)     NOT NULL    COMMENT '점포 명', 
+    `shop_address`  VARCHAR(300)    NOT NULL    COMMENT '점포 주소', 
+     PRIMARY KEY (shop_id)
+);
+
+ALTER TABLE shop_info COMMENT '사업주 정보 테이블';
+
+ALTER TABLE shop_info
+    ADD CONSTRAINT FK_shop_info_product_seq_product_info_product_seq FOREIGN KEY (product_seq)
+        REFERENCES product_info (product_seq) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- user_mileage_info Table Create SQL
+CREATE TABLE user_mileage_info
+(
+    `mileage_seq`   INT UNSIGNED    NOT NULL    COMMENT '마일리지 고유번호', 
+    `user_id`       VARCHAR(25)     NOT NULL    COMMENT '사용자 아이디', 
+    `shop_id`       VARCHAR(25)     NOT NULL    COMMENT '점포 아이디', 
+    `user_mileage`  INT             NOT NULL    COMMENT '사용자 마일리지', 
+    `mileage_dt`    DATETIME        NOT NULL    DEFAULT NOW() COMMENT '마일리지 일자', 
+     PRIMARY KEY (mileage_seq)
+);
+
+ALTER TABLE user_mileage_info COMMENT '사용자의 마일리지 적립 정보';
+
+ALTER TABLE user_mileage_info
+    ADD CONSTRAINT FK_user_mileage_info_shop_id_shop_info_shop_id FOREIGN KEY (shop_id)
+        REFERENCES shop_info (shop_id) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE user_mileage_info
+    ADD CONSTRAINT FK_user_mileage_info_user_id_user_info_user_id FOREIGN KEY (user_id)
+        REFERENCES user_info (user_id) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- t1 Table Create SQL
+CREATE TABLE t1
+(
+    `user_id`        VARCHAR(25)     NOT NULL    COMMENT '사용자 아이디', 
+    `user_pw`        VARCHAR(25)     NOT NULL    COMMENT '사용자 비밀번호', 
+    `user_seq`       INT UNSIGNED    NOT NULL    COMMENT '사용자 고유번호', 
+    `user_type`      CHAR(1)         NOT NULL    COMMENT '사용자 유형', 
+    `user_phone`     VARCHAR(25)     NOT NULL    COMMENT '사용자 휴대폰번호', 
+    `user_address`   VARCHAR(300)    NOT NULL    COMMENT '사용자 주소', 
+    `user_nm`        VARCHAR(25)     NOT NULL    COMMENT '사용자 명', 
+    `user_joindate`  DATETIME        NOT NULL    DEFAULT NOW() COMMENT '사용자 가입일자', 
+    `product_seq`    INT UNSIGNED    NOT NULL    COMMENT '제품 고유번호', 
+     PRIMARY KEY (user_id)
+);
+
+ALTER TABLE t1 COMMENT '사용자 정보 테이블';
+
+
+-- t2 Table Create SQL
+CREATE TABLE t2
+(
+    `user_id`        VARCHAR(25)     NOT NULL    COMMENT '사용자 아이디', 
+    `user_pw`        VARCHAR(25)     NOT NULL    COMMENT '사용자 비밀번호', 
+    `user_seq`       INT UNSIGNED    NOT NULL    COMMENT '사용자 고유번호', 
+    `user_type`      CHAR(1)         NOT NULL    COMMENT '사용자 유형', 
+    `user_phone`     VARCHAR(25)     NOT NULL    COMMENT '사용자 휴대폰번호', 
+    `user_address`   VARCHAR(300)    NOT NULL    COMMENT '사용자 주소', 
+    `user_nm`        VARCHAR(25)     NOT NULL    COMMENT '사용자 명', 
+    `user_joindate`  DATETIME        NOT NULL    DEFAULT NOW() COMMENT '사용자 가입일자', 
+     PRIMARY KEY (user_id)
+);
+
+ALTER TABLE t2 COMMENT '사용자 정보 테이블';
+
+
