@@ -3,34 +3,29 @@
 
 일회용컵 보증금 제도 시행에 따른 CNN 이미지 분류 모델을 활용한 일회용컵 수거함
 
-![image](https://user-images.githubusercontent.com/64225078/217773089-ebea55c9-b193-4f35-875d-db8a2aba1de6.png)
+# 제안 및 필요성
+![image](https://user-images.githubusercontent.com/64225078/217776312-9683e9ed-0425-4d77-b544-3412ba5e25d2.png)
+![image](https://user-images.githubusercontent.com/64225078/217776378-6add6b43-dd75-4736-8538-28d69380996c.png)
+![image](https://user-images.githubusercontent.com/64225078/217776531-f2250020-376e-4556-8fe9-b85f836e9b39.png)
 
-# 개발 환경 및 언어
-![image](https://user-images.githubusercontent.com/64225078/217773492-d3eae8f2-7552-474d-9499-7719ae364d6a.png)
+
+# 개발 환경 및 부품
+![image](https://user-images.githubusercontent.com/64225078/217776796-75817963-b8f6-488f-9fea-7dd83849323c.png)
+![image](https://user-images.githubusercontent.com/64225078/217776812-ba94d75b-a1bd-456e-94a0-e25ee33e5505.png)
+
 
 # 기능 흐름도
-![image](https://user-images.githubusercontent.com/64225078/217774673-4c3eca6c-ed7a-4b45-95ee-89ebd3dc326b.png)
+![image](https://user-images.githubusercontent.com/64225078/217776705-84ff5ae6-09b0-4042-8086-023774bb05e5.png)
+![image](https://user-images.githubusercontent.com/64225078/217776859-46e0216c-eea0-4436-97d2-a41d2975e30b.png)
+![image](https://user-images.githubusercontent.com/64225078/217777302-39e28519-0daa-4574-bc96-31a1bb7ed0ac.png)
 
-![image](https://user-images.githubusercontent.com/64225078/217773812-8f5acbf4-8560-415a-ae49-1a6f76046b7c.png)
-
-
-
-![image](https://user-images.githubusercontent.com/64225078/217774929-143715fd-e2cd-43ec-8792-6ff67b7f7a3b.png)
-
-
-
-# 사용 부품
-![image](https://user-images.githubusercontent.com/64225078/217774589-f2dd49dd-3518-497a-85bd-2f490acec73f.png)
 
 # 개발 과정
-![image](https://user-images.githubusercontent.com/64225078/217774242-8b53c59a-fe36-47fa-ad57-a897de2f1d91.png)
-![image](https://user-images.githubusercontent.com/64225078/217775646-ec070d4f-1108-4714-8783-371d5f325c3b.png)
-![image](https://user-images.githubusercontent.com/64225078/217775669-bb70c8ad-6779-4bd8-9686-5f35a9a0292c.png)
-![image](https://user-images.githubusercontent.com/64225078/217775694-aa9c7552-19c7-4b86-b358-92d0814fa824.png)
-
+![image](https://user-images.githubusercontent.com/64225078/217777385-babeef6c-b290-4a81-a03e-698ae4c26064.png)
+![image](https://user-images.githubusercontent.com/64225078/217777427-5f517347-f9f0-4e59-a5ab-d74a2fe9a969.png)
+![image](https://user-images.githubusercontent.com/64225078/217777458-2e493950-87eb-4cf6-bd41-02f9bda65ed4.png)
+![image](https://user-images.githubusercontent.com/64225078/217777498-663887be-d5fd-4a93-84dc-312cafbe2253.png)
 
 # 역할
-![image](https://user-images.githubusercontent.com/64225078/217775205-5ddc8427-c02b-46a6-91ce-5adb9cb61c77.png)
+![image](https://user-images.githubusercontent.com/64225078/217777565-da885e1a-576b-4ed9-b559-4fa6d124c2a9.png)
 
-# PPT
-LIT_Dream Catcher.pptx
